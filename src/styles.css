@@ -4,7 +4,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(#001d10, #003517);
+    background-image: url(images/background.jpg);
+    background-size: 1600px 1100px;
+    background-position: center ;
+   
 }
 
 .title{
@@ -24,12 +27,15 @@
 }
 
 .containerInput{
-    background-color: rgba(255,255,255,0.2);
-    margin:34px 0px;
+    background-color: rgba(255, 255, 255, 0.397);
+    margin:35px 0px;
+    margin-top: px;
     padding: 15px;
     display: flex;
     border-radius: 8px;
     box-shadow: 1px 3px 8px rgba(0,0,0,0.5);
+    position: relative;
+    bottom: 25px;
 }
 
 .containerInput input{
@@ -66,7 +72,7 @@
     flex-direction: column;
     width: 500px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #ffffffe9;
 }
 
 .main h2{

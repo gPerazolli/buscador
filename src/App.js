@@ -35,7 +35,6 @@ function App() {
       <div className="containerInput">
 
         <input type="text" placeholder="Digite seu cep..." value={input} onChange={(event) => setInput(event.target.value)}>
-
         </input>
 
         <button className="buttonSearch" onClick={handleChange}>
