@@ -11,20 +11,28 @@ function App() {
   async function handleChange(){
 
     if(input === ""){
-      alert("Preencha algum CEP")
+      alert("Preencha algum CEP");
       return;
     }
 
     try{
       const response = await api.get(`${input}/json`);
-      console.log(response)
-      setCep(response.data)
+      console.log(response);
+      verification(response);
       setInput("");
     }
     catch{
 
     }
+  }
 
+  function verification(response){
+    if(Object.keys(response.data).length ===1){
+      alert("CEP não encontrado!!");
+    }
+    else{
+      setCep(response.data);
+    }
   }
 
   return (
@@ -43,7 +51,7 @@ function App() {
 
       </div>
 
-      {Object.keys(cep).length > 0 &&(
+      {Object.keys(cep).length > 1 &&(
 
         <main className="main">
 
